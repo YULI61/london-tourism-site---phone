@@ -1,0 +1,336 @@
+/* Base Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Helvetica Neue', sans-serif;
+  color: #000000;
+  background-color: #f6f1ec;
+  overflow-x: hidden;
+}
+
+/* Navigation */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: transparent;
+  display: flex;
+  justify-content: flex-end; 
+  align-items: center;
+  padding: 1rem 3rem;
+  z-index: 999;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.navbar > nav > ul > li > a {
+  mix-blend-mode: difference;
+}
+
+
+
+.navbar a {
+  color: #333; 
+}
+
+
+.navbar.dark a {
+  color: #fff !important;
+}
+
+.navbar.dark .dropdown-menu {
+  background-color: #222;  
+  border-color: #444;
+}
+
+.navbar.dark .dropdown-menu a {
+  color: #eee !important;
+  background-color: #222 !important;
+}
+
+.navbar.dark .dropdown-menu a:hover {
+  background-color: #333 !important;
+  color: #ffcc99 !important; 
+}
+
+
+
+.navbar ul li a:hover {
+  color: #8E6CFF;
+}
+
+.navbar ul li a.active {
+  position: relative;
+  font-weight: 800;
+}
+.navbar ul li a.active::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #8E6CFF;
+}
+
+
+
+.section {
+  text-align: center;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  
+}
+.section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.section p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* #fullpage {
+  height: 100%;
+}
+
+.fullpage-section {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  position: relative;
+  padding: 0;
+  margin: 0;
+}
+
+.fullpage-section iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+} */
+
+/* Styles for the demo */
+h1 {
+  font-size: 6em;
+  font-size: calc(2em + 2vw);
+  font-family: arial, helvetica;
+  margin: 0;
+}
+
+.intro p {
+  width: 50%;
+  margin: 0.5em auto;
+  font-size: 1.65em;
+}
+
+/* .section iframe {
+  width: 100vw;
+  height: 100vh;
+  border: none;
+  display: block;
+  pointer-events: none; 
+}
+.section iframe::-webkit-scrollbar {
+  display: none;
+}
+
+
+/* Overwriting styles for the navigation dots */
+/* #fp-nav ul li a span,
+.fp-slidesNav ul li a span {
+  background: white;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+} */ */
+
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+section#home {
+  position: relative;
+  height: 100vh; /* 整个视口高度 */
+  width: 100%;
+  overflow: hidden;
+}
+
+section#home iframe {
+  position: absolute; /* 覆盖整个 section */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  z-index: 1;
+}
+
+.home-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10; /* 高于 iframe */
+  text-align: center;
+  color: white;
+}
+
+
+.home-title-main {
+  font-family: 'Dancing Script', cursive;
+  font-size: 6rem;
+  text-align: center;
+  line-height: 1.2;
+  margin: 0;
+  display: inline-block;
+}
+
+
+h2.home-subtitle {
+  font-family: 'Merriweather', serif;
+  font-size: 1.5rem;
+  max-width: 90%;
+  margin-top: 2rem;
+  line-height: 1;
+}
+
+
+.home-explore-btn {
+  display: block;
+  margin: 1.5rem auto 2rem auto; 
+  padding: 0.75rem 2rem;
+  font-size: 1.2rem;
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  cursor: pointer;
+  border-radius: 50px;
+  transition: all 0.3s;
+}
+
+
+
+.handwriting {
+  font-family: 'Dancing Script', cursive;
+}
+
+
+
+.nav-dropdown {
+  position: relative;
+}
+
+
+.navbar .dropdown-menu {
+  display: none; 
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #f6f1ec;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  min-width: 200px;
+  z-index: 9999;
+  flex-direction: column;
+}
+
+
+.nav-dropdown:hover .dropdown-menu {
+  display: flex;
+}
+
+.navbar .dropdown-menu li {
+  width: 100%;
+}
+
+.navbar .dropdown-menu a {
+  display: block;
+  padding: 6px 16px;
+  font-size: 15px;
+  color: #333;
+  background-color: #f6f1ec;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar .dropdown-menu a:hover {
+  background-color: #e9e2db;
+  color: #c85a2e;
+  text-decoration: underline;
+}
+
+
+
+.navbar .dropdown-menu a {
+  background-color: #f6f1ec;
+  color: #333;
+  padding: 6px 16px;
+  font-size: 15px;
+  display: block;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar .dropdown-menu a:hover {
+  background-color: #e9e2db;
+  color: #c85a2e;
+}
+
+
+.navbar.dark .dropdown-menu {
+  background-color: #333;
+  border-color: #444;
+}
+
+.navbar.dark .dropdown-menu a {
+  background-color: #333 !important;
+  color: #eee !important;
+}
+
+.navbar.dark .dropdown-menu a:hover {
+  background-color: #444 !important;
+  color: #ffcc99 !important;
+}
+
+
+section {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+iframe {
+  width: 100%;
+  height: 100vh;
+  border: none;
+  display: block;
+  position: relative; /* 默认即可，不要 z-index 太大 */
+  z-index: 1; 
+}
+
